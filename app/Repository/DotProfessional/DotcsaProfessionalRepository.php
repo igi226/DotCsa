@@ -19,5 +19,9 @@ class DotcsaProfessionalRepository implements DotcsaProfessionalInterface{
     $data['created_at'] = date('Y-m-d');
     return DB::table('dot_professionals')->insert($data);
   }
+
+  public function getDotProfessionals(){
+    return DB::table('dot_professionals')->get();
+  }
 }
 ?>
