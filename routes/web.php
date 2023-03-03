@@ -25,6 +25,9 @@ Route::post('/register-form', [IndexController::class, 'registerRequest'])->name
 Route::get('/field-training-events', [IndexController::class, 'fieldTrainingEvents'])->name('fieldTrainingEvents');
 Route::get('/insurance-agencies', [IndexController::class, 'insuranceAgencies'])->name('insuranceAgencies');
 Route::get('/expert-witness', [IndexController::class, 'expertWitness'])->name('expertWitness');
-// Route::get('{any?}', function ($any) {
-//     return "no result found for". $any;
-//  })->where('any', '.*');
+Route::get('admin/', function() {
+    return redirect('admin/dashboard');
+    });
+Route::fallback( function() {
+    return "no page found for this url";
+    });

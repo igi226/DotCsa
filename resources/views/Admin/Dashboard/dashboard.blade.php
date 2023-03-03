@@ -6,7 +6,7 @@
       <div class="row align-items-center">
         <div class="col-md-6">
           <div class="title mb-30">
-            <h2>eCommerce Dashboard</h2>
+            <h2>Dashboard</h2>
           </div>
         </div>
         <div class="col-md-6">
@@ -16,7 +16,7 @@
                 <li class="breadcrumb-item">
                   <a href="#0">Dashboard</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page"> eCommerce </li>
+                <li class="breadcrumb-item active" aria-current="page"> DOTCSA </li>
               </ol>
             </nav>
           </div>
@@ -30,7 +30,7 @@
             <i class="lni lni-cart-full"></i>
           </div>
           <div class="content">
-            <h6 class="mb-10">New Orders</h6>
+            <h6 class="mb-10">Total request</h6>
             <h3 class="text-bold mb-10">34567</h3>
             <p class="text-sm text-success">
               <i class="lni lni-arrow-up"></i> +2.00% <span class="text-gray">(30 days)</span>
@@ -38,7 +38,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xl-3 col-lg-4 col-sm-6">
+      {{-- <div class="col-xl-3 col-lg-4 col-sm-6">
         <div class="icon-card mb-30">
           <div class="icon success">
             <i class="lni lni-dollar"></i>
@@ -65,7 +65,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> --}}
       <div class="col-xl-3 col-lg-4 col-sm-6">
         <div class="icon-card mb-30">
           <div class="icon orange">

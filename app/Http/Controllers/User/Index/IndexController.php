@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User\Index;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\DotProfessionalRequest;
 use App\Repository\DotProfessional\DotcsaProfessionalInterface;
 use Illuminate\Http\Request;
 
@@ -25,16 +26,8 @@ class IndexController extends Controller
     return view('User.MotorCarrierSupport.motorCarrierSupport');
    }
 
-   public function registerRequest( Request $request ) {
-      $request->validate([
-         'name' => 'required|string',
-         'contact_number' => 'required|numeric',
-         'email' => 'required|email',
-         'address' => 'required|string',
-         'city' => 'required|string',
-         'state' => 'required|string',
-         'zipcode' => 'required|string',
-      ]);
+   public function registerRequest( DotProfessionalRequest $request ) {
+      
 
       $data = $request->only('name', 'contact_number','email','address','city','state','zipcode','profile_doc');
 

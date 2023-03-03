@@ -1,7 +1,9 @@
 <?php 
 namespace App\Repository\DotProfessional;
 
+use App\Models\DotProfessional;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class DotcsaProfessionalRepository implements DotcsaProfessionalInterface{
 
@@ -22,6 +24,13 @@ class DotcsaProfessionalRepository implements DotcsaProfessionalInterface{
 
   public function getDotProfessionals(){
     return DB::table('dot_professionals')->get();
+  }
+
+  public function deleteDotProfessionals($id) {
+    $dot_profesional = DotProfessional::findOrFail($id);
+    File::delete(public_path("storage/DotProfessionalContent/" . $dot_profesional->profile_doc));
+    return $dot_profesional->delete();
+    
   }
 }
 ?>
