@@ -18,6 +18,7 @@ Route::group(['middleware' => ["admin"]], function () {
     Route::resource('cms', CmsController::class);
     Route::get('cms-home-page', [CmsController::class, 'cmsHomepage'])->name('admin.cmsHomepage');
     Route::get('cms-about-page', [CmsController::class, 'cmsAboutpage'])->name('admin.cmsAboutpage');
+    Route::get('cms-motor-career-page', [CmsController::class, 'cmsMotorCareerpage'])->name('admin.cmsMotorCareerpage');
 
 
     Route::get('log-out', [AuthController::class, 'adminLogout'])->name('admin.logout');

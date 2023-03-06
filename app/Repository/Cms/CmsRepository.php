@@ -14,6 +14,10 @@ class CmsRepository implements CmsInterface {
     return DB::table('cms')->where('page', 'about')->get();
     }
 
+    public function getMotorCareerPage() {
+    return DB::table('cms')->where('page', 'motorcareer')->get();
+    }
+
     public function getCms($slug){
         return DB::table('cms')->where('slug', $slug)->first();
     }

@@ -70,6 +70,10 @@
               <li class="{{ Route::currentRouteName() == 'admin.cmsAboutpage' ? 'active' : '' }}">
                 <a href="{{ route('admin.cmsAboutpage') }}"> About Page </a>
               </li>
+
+              <li class="{{ Route::currentRouteName() == 'admin.cmsMotorCareerpage' ? 'active' : '' }}">
+                <a href="{{ route('admin.cmsMotorCareerpage') }}"> Motor Career Page </a>
+              </li>
               <li>
                 <a href="{{ route('cms.create') }}">Add New </a>
               </li>
