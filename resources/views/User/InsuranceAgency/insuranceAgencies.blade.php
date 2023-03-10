@@ -24,7 +24,10 @@
         <hr>
         <div class="row justify-content-center">
             <div class="col-lg-9">
-                <h5 class="text-center text-dark" style="line-height: 1.5;">We Train ES&H Safety Professionals on better serving their clients</h5>
+                <h5 class="text-center text-dark" style="line-height: 1.5;">DOTCSA IS Currentiy working with two National Brokers providing Subject
+                    Matter Experts to support your Safety Risk Management Goals</h5>
+                    <h5 class="text-center text-dark" style="line-height: 1.5;">DOTCSA is partner with many Commercial Truck Insurance Agents for
+                        retaining your clients year after year for renewal.</h5>
             </div>
             <div class="col-lg-8">
                 <div class="contact_form_main mt-5 mb-5">

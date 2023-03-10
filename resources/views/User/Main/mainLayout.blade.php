@@ -75,7 +75,7 @@
                                 <a href="{{ route('motorCarrierSupport') }}">Motor Carrier Support</a>
                             </li>
                             <li class="{{ Route::currentRouteName() == 'fieldTrainingEvents' ? 'current' : '' }}"><a href="{{ route('fieldTrainingEvents') }}">Field Training Events</a></li>
-                            <li class="{{ Route::currentRouteName() == 'insuranceAgencies' ? 'current' : '' }}"><a href="{{ route('insuranceAgencies') }}">Insurance Agencies</a></li>
+                            <li class="{{ Route::currentRouteName() == 'insuranceAgencies' ? 'current' : '' }}"><a href="{{ route('insuranceAgencies') }}">Insurance Professionals</a></li>
                             <li class="{{ Route::currentRouteName() == 'expertWitness' ? 'current' : '' }}"><a href="{{ route('expertWitness') }}">Expert Witness</a></li>
                         </ul>
                     </nav>
@@ -126,11 +126,10 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="footer_wedget footer_navigation">
                         <ul>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="motor-carrier-support.html">Motor Carrier Support</a></li>
-                            <li><a href="field-training-events.html">Field Training Events</a></li>
-                            <li><a href="insurance-agencies.html">Insurance Agencies</a></li>
-                            <li><a href="expert-witness.html">Expert Witness</a></li>
+                            <li><a href="{{ route('aboutUs') }}">About</a></li>
+                            <li><a href="{{ route('fieldTrainingEvents') }}">Field Training Events</a></li>
+                            <li><a href="{{ route('insuranceAgencies') }}">Insurance Professionals</a></li>
+                            <li><a href="{{ route('expertWitness') }}">Expert Witness</a></li>
                         </ul>
                     </div>
                 </div>
@@ -143,7 +142,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="copy-right-area">
-                        <p>Copyright © 2023 DOTCSA - All Rights Reserved. </p>
+                        <p>Copyright © {{ date('Y') }} DOTCSA - All Rights Reserved. </p>
                         <small>*DOTCSA is not affiliated nor claims any association, partnership, or relationship with
                             any Federal or State DOT Government or Law Enforcement Agency. </small>
                     </div>

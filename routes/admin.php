@@ -20,6 +20,9 @@ Route::group(['middleware' => ["admin"]], function () {
     Route::get('cms-about-page', [CmsController::class, 'cmsAboutpage'])->name('admin.cmsAboutpage');
     Route::get('cms-motor-career-page', [CmsController::class, 'cmsMotorCareerpage'])->name('admin.cmsMotorCareerpage');
 
+    //site-setting
+    Route::get('/site-setting', [CmsController::class, 'siteShow'])->name('site.info');
+    Route::post('/site-setting', [CmsController::class, 'siteUpdate'])->name('site.update');
 
     Route::get('log-out', [AuthController::class, 'adminLogout'])->name('admin.logout');
 

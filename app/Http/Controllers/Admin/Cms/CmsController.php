@@ -3,11 +3,15 @@
 namespace App\Http\Controllers\Admin\Cms;
 
 use App\Http\Controllers\Controller;
+use App\Models\SiteInfo;
 use App\Repository\Cms\CmsInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File as FacadesFile;
 use illuminate\Support\Str;
 use Illuminate\Validation\Rules\File;
+
+
 
 class CmsController extends Controller
 {
@@ -103,14 +107,53 @@ class CmsController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function siteShow()
     {
-        //
+        $data['site_info'] = DB::table('site_infos')->where('slug', 'site-info-dotcsa')->first();
+        return view('Admin.SiteInfo.siteinfo', $data);
+    }
+
+    public function siteUpdate(Request $request)
+    {
+        $request->validate([
+            'site_name' => 'required|string',
+            // 'logo_image' => 'required',
+            // 'favicon_image' => 'required',
+            // 'address' => 'required|string',
+            'email' => 'required|string',
+            'phone' => 'required|string',
+            'twitter' => 'nullable|string',
+            'facebook' => 'nullable|string',
+            'instagram' => 'nullable|string',
+            'pinterest' => 'nullable|string',
+            'linkdin' => 'nullable|string',
+        ]);
+        $image = SiteInfo::where('slug', 'site-info-dotcsa')->select('logo_image', 'favicon_image')->first();
+        $data = $request->except('_token', 'logo_image', 'favicon_image');
+
+        if ($request->has('logo_image')) {
+            $file = $request->file('logo_image');
+            $db_logo_image = time() . rand(0000, 9999) . '.' . $file->getClientOriginalExtension();
+            $file->storeAs("public/SiteImage", $db_logo_image);
+            FacadesFile::delete(public_path('storage/SiteImage/'. $image->logo_image));
+            $data['logo_image'] = $db_logo_image;
+        }
+
+        if ($request->has('favicon_image')) {
+            $file = $request->file('favicon_image');
+            $db_favicon_image = time() . rand(0000, 9999) . '.' . $file->getClientOriginalExtension();
+            $file->storeAs("public/SiteImage", $db_favicon_image);
+            FacadesFile::delete(public_path('storage/SiteImage/'. $image->favicon_image));
+
+            $data['favicon_image'] = $db_favicon_image;
+        }
+
+        $update = SiteInfo::where('slug', 'site-info-dotcsa')->update($data);
+        if($update) {
+            return back()->with('msg', 'Site Information Updated successfully');
+        }else{
+            return back()->with('msg', 'No Changes Done');
+        }
+
     }
 }

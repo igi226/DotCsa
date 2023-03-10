@@ -23,7 +23,7 @@ Route::get('/about-us', [IndexController::class, 'aboutUs'])->name('aboutUs');
 Route::get('/motor-carrier-support', [IndexController::class, 'motorCarrierSupport'])->name('motorCarrierSupport');
 Route::post('/register-form', [IndexController::class, 'registerRequest'])->name('registerRequest');
 Route::get('/field-training-events', [IndexController::class, 'fieldTrainingEvents'])->name('fieldTrainingEvents');
-Route::get('/insurance-agencies', [IndexController::class, 'insuranceAgencies'])->name('insuranceAgencies');
+Route::get('/insurance-professionals', [IndexController::class, 'insuranceAgencies'])->name('insuranceAgencies');
 Route::get('/expert-witness', [IndexController::class, 'expertWitness'])->name('expertWitness');
 Route::get('admin/', function() {
     return redirect('admin/dashboard');

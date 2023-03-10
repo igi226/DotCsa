@@ -23,9 +23,13 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="text-center">
-                    <h4 class=" text-center mb-4">Our Founding Members Have Subject Matter Expertise</h4>
+                    <h4 class=" text-center mb-4">Our Founding Members Have  Former Official Subject Matter Expertise</h4>
                     <p>DOTCSA has founding members with specialized technical and transportation industry knowledge who can "assist the trier of fact,". </p>
-                    <p>DOTCSA can confidently admit our Founders do not "Knot It All". We can direct you to other Association Members & Vetted Providers with a larger variety of subject matter expertise in the transportation industry.</p>
+                    <p>DOTCSA's founding members can review your situation involving HR, Legal, or other
+                        Subject Matter Expertise.
+                        We use our proven experience in Private Fleet Industry Management, Former State
+                        & Federal DOT Government Agencies, and Former Law Enforcement to conduct
+                        Independent Third Party Analysis for your professional needs.</p>
                     <a href="mailto:safety@dotcsa.com" class="btn btn-theme text-uppercase text-dark mt-2">Find out more</a>
                 </div>
             </div>
