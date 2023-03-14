@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\DotProfessionalRequest;
 use App\Repository\DotProfessional\DotcsaProfessionalInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
@@ -15,7 +16,13 @@ class IndexController extends Controller
       $this->dotProfessional = $dotcsaProfessionalInterface;
    }
    public function index() {
-    return view('User.Index.index');
+      $data = [
+         'banner1' => DB::table('cms')->where('slug', 'we-train-you-to-be-your-own')->first(),
+         'banner2' => DB::table('cms')->where('slug', 'we-train-you-to-be-your-own-banner2')->first(),
+         'secondPortion' => DB::table('cms')->where('slug', 'dotcsa-has-decades-of-experience-in-government-industry')->first(),
+         'thirdPortion' => DB::table('cms')->where('slug', 'dotcsa-has-access-to-dot-safety-pros-meeting-our-standards')->first(),
+      ];
+    return view('User.Index.index', $data);
    }
 
    public function aboutUs() {

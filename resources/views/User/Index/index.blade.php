@@ -3,74 +3,59 @@
 @section('content')
     <section class="home_three_banner">
         <div class="home_three_slider_wrapper owl-theme owl-carousel">
-            <div class="home_three_slider_item" style="background-image:url(User/assets/img/home-3/banner/banner-1.png)">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="home_three_banner_text">
-                                <h5> We train you <span>to be your own </span>DOT Subject Matter Expert</h5>
+            @if (isset($banner1->image) &&
+                    !empty($banner1->image) &&
+                    File::exists(public_path('storage/CmsImage/' . $banner1->image)))
+                <div class="home_three_slider_item"
+                    style="background-image:url({{ asset('storage/CmsImage/' . $banner1->image) }})">
+                @else
+                    <div class="home_three_slider_item"
+                        style="background-image:url(User/assets/img/home-3/banner/banner-1.png)">
+            @endif
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="home_three_banner_text">
 
-                                <ul class="slidepoints mb-4">
-                                    <li>
-                                        DOTCSA ACCREDITED Training Modeled For Best Practices in Self Auditing and Mock
-                                            Investigations Standard DOT
-                                    </li>
-                                    <li>
-                                        Government Intervention Investigation and Inspection Methodologies
-                                    </li>
-                                    <li>
-                                         Motor Carrier Safety Assistance Program Education to better engage with State &
-                                            Federal
-                                            Oversight in your State
-                                    </li>
-                                    <li>
-                                        24 hour Phone Access to a DOTCSA reviewed Subject Matter Expert with former
-                                            State, Federal, Law Enforcement
-                                            &Private DOT Large Fleet Experience.
-                                    </li>
-                                </ul>
+                            <h5>{{ $banner1->title }}</h5>
+                            <ul class="slidepoints mb-4">
+                                <?php echo html_entity_decode($banner1->description); ?>
+
+                            </ul>
 
 
-                                <a class="btn btn-theme" href="#">Contact DOTCSA</a>
-                            </div>
+                            <a class="btn btn-theme" href="#">Contact DOTCSA</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="home_three_slider_item" style="background-image:url(User/assets/img/home-3/banner/banner-2.png)">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="home_three_banner_text">
-                                <h5> We train you <span>to be your own </span>DOT Subject Matter Expert</h5>
+        </div>
+        @if (isset($banner2->image) &&
+                !empty($banner2->image) &&
+                File::exists(public_path('storage/CmsImage/' . $banner2->image)))
+            <div class="home_three_slider_item"
+                style="background-image:url({{ asset('storage/CmsImage/' . $banner2->image) }})">
+            @else
+                <div class="home_three_slider_item"
+                    style="background-image:url(User/assets/img/home-3/banner/banner-2.png)">
+        @endif
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="home_three_banner_text">
+                        <h5>{{ $banner2->title }}</h5>
+                        <ul class="slidepoints mb-4">
+                            <?php echo html_entity_decode($banner2->description); ?>
 
-                                <ul class="slidepoints mb-4">
-                                    <li>
-                                        DOTCSA ACCREDITED Training Modeled For Best Practices in Self Auditing and Mock
-                                            Investigations Standard DOT
-                                    </li>
-                                    <li>
-                                        Government Intervention Investigation and Inspection Methodologies
-                                    </li>
-                                    <li>
-                                         Motor Carrier Safety Assistance Program Education to better engage with State &
-                                            Federal
-                                            Oversight in your State
-                                    </li>
-                                    <li>
-                                        24 hour Phone Access to a DOTCSA reviewed Subject Matter Expert with former
-                                            State, Federal, Law Enforcement
-                                            &Private DOT Large Fleet Experience.
-                                    </li>
-                                </ul>
+                        </ul>
 
 
-                                <a class="btn btn-theme" href="#">Contact DOTCSA</a>
-                            </div>
-                        </div>
+                        <a class="btn btn-theme" href="#">Contact DOTCSA</a>
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
     </section>
     <!-- Banner Area End -->
@@ -81,15 +66,19 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="home_three_about_img">
+                        @if (isset($secondPortion->image) && !empty($secondPortion->image) && File::exists(public_path('storage/CmsImage/' . $secondPortion->image)))
+                        <img src="{{ asset('storage/CmsImage/'. $secondPortion->image) }}" alt="img">
+                        @else
                         <img src="{{ asset('User/assets/img/about.png') }}" alt="img">
+                        @endif
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="home_three_about_text_wrapper">
                         <div class="about_three_middel_cntent">
-                            <h2>DOTCSA HAS DECADES OF EXPERIENCE IN GOVERNMENT and Large Motor Carrier Fleet Operations</h2>
-                            <h4 class="mt-3 text-warning">REAL EXPERIENCE MATTERS</h4>
-                            <p>
+                            <h2>{{ $secondPortion->title }}</h2>
+                            <h4 class="mt-3 text-warning">{{ $secondPortion->short_desc }}</h4>
+                            {{-- <p>
                                 It's 2023, DOT Consulting has largely been about Reading a DoT
                                 Book. <br>
                                 DOTCSA Knows DoT Compliance is BEYOND goes beyond a
@@ -103,7 +92,9 @@
                                 a potential to reduce your insurance Liabilities.
                                 Ask us about our work Partnering with Insurance Brokers to help
                                 you reduce your Insurance costs
-                            </p>
+                            </p> --}}
+                   
+                            <?php echo html_entity_decode($secondPortion->description); ?>
                         </div>
 
                     </div>
@@ -119,8 +110,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section_heading_three_center">
-                        <h2>DOTCSA HAS ACCESS TO DOT SAFETY <br>PROS MEETING OUR STANDARDS</h2>
-                        <h5 class="mt-4">DOTCSA Accredited DOT Safety Compliance Service Providers Can Help.</h5>
+                        <h2>{{ $thirdPortion->title }}</h2>
+                        <h5 class="mt-4">{{ $thirdPortion->short_desc }}</h5>
                     </div>
                 </div>
             </div>

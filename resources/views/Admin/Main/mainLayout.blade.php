@@ -188,6 +188,7 @@
                 });
         });
     </script>
+    @yield('ckeditor')
 </body>
 
 </html>
