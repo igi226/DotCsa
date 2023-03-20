@@ -29,5 +29,5 @@ Route::get('admin/', function() {
     return redirect('admin/dashboard');
     });
 Route::fallback( function() {
-    return "no page found for this url";
+    return view('404PageNotFound');
     });

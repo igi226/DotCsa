@@ -35,7 +35,7 @@
             <div class="top-left">
                 <!-- Info List -->
                 <ul class="list-style-one">
-                    <li>DOTCSA Accredited 49 CFR Safety Fitness Training</li>
+                    <li>DOTCSA Accredited 49 CFR Safety Fitness Determination Training</li>
                 </ul>
             </div>
 

@@ -3,9 +3,7 @@
 @section('content')
     <section class="home_three_banner">
         <div class="home_three_slider_wrapper owl-theme owl-carousel">
-            @if (isset($banner1->image) &&
-                    !empty($banner1->image) &&
-                    File::exists(public_path('storage/CmsImage/' . $banner1->image)))
+            @if (isset($banner1->image) && !empty($banner1->image) && File::exists(public_path('storage/CmsImage/' . $banner1->image)))
                 <div class="home_three_slider_item"
                     style="background-image:url({{ asset('storage/CmsImage/' . $banner1->image) }})">
                 @else
