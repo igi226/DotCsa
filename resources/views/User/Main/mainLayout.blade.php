@@ -43,7 +43,7 @@
             <div class="top-right">
                 <div class="top_bar_left_side">
                     <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal" data-bs-whatever="@mdo"><span class="text-danger">Want to be a DOT Regulatory Professional <br> Register Here</span></button>
+                        data-bs-target="#exampleModal" data-bs-whatever="@mdo"><span class="text-danger">Want to be a DOT Regulatory Professional, Register Here</span></button>
                     <ul class="social-icon-one">
                         <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
                         <li><a href="#"><span class="fab fa-twitter"></span></a></li>
@@ -135,8 +135,8 @@
                         <ul>
                             <li><a href="{{ route('aboutUs') }}">About</a></li>
                             <li><a href="{{ route('fieldTrainingEvents') }}">Field Training Events</a></li>
-                            <li><a href="javascript:void(0)">Insurance Professionals</a></li>
                             <li><a href="{{ route('expertWitness') }}">Expert Witness</a></li>
+                            <li><a href="javascript:void(0)">Gallery</a></li>
                         </ul>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
         </div>
     </footer>
     <div id="copy_right">
-        <div class="">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="copy-right-area">
