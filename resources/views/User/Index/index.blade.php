@@ -22,7 +22,7 @@
                             </ul>
 
 
-                            <a class="btn btn-theme" href="#">Contact DOTCSA</a>
+                            <a class="btn btn-theme" href="#">Contact us for info</a>
                         </div>
                     </div>
                 </div>

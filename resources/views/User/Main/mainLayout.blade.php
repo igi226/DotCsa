@@ -35,15 +35,15 @@
             <div class="top-left">
                 <!-- Info List -->
                 <ul class="list-style-one">
-                    <li>DOTCSA Accredited 49 CFR Safety Fitness Determination Training</li>
+                    <li>DOTCSA Certified Determination Training <br> based on Fomer Govermment Investigators,
+                        Auditors, and Inspectors</li>
                 </ul>
             </div>
 
             <div class="top-right">
                 <div class="top_bar_left_side">
                     <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal" data-bs-whatever="@mdo"><span class="text-danger">DOT
-                            PROFESSIONALS REGISTER HERE</span></button>
+                        data-bs-target="#exampleModal" data-bs-whatever="@mdo"><span class="text-danger">Want to be a DOT Regulatory Professional <br> Register Here</span></button>
                     <ul class="social-icon-one">
                         <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
                         <li><a href="#"><span class="fab fa-twitter"></span></a></li>
@@ -69,14 +69,21 @@
                                 <a href="{{ route('index') }}">Home</a>
                             </li>
                             <li class="{{ Route::currentRouteName() == 'aboutUs' ? 'current' : '' }}">
-                                <a href="{{ route('aboutUs') }}">About</a>
+                                <a href="{{ route('aboutUs') }}">Mission</a>
                             </li>
                             <li class="{{ Route::currentRouteName() == 'motorCarrierSupport' ? 'current' : '' }}">
-                                <a href="{{ route('motorCarrierSupport') }}">Motor Carrier Support</a>
+                                <a href="{{ route('motorCarrierSupport') }}">Motor Carrier / Driver Support</a>
                             </li>
                             <li class="{{ Route::currentRouteName() == 'fieldTrainingEvents' ? 'current' : '' }}"><a href="{{ route('fieldTrainingEvents') }}">Field Training Events</a></li>
-                            <li class="{{ Route::currentRouteName() == 'insuranceAgencies' ? 'current' : '' }}"><a href="{{ route('insuranceAgencies') }}">Insurance Professionals</a></li>
-                            <li class="{{ Route::currentRouteName() == 'expertWitness' ? 'current' : '' }}"><a href="{{ route('expertWitness') }}">Expert Witness</a></li>
+                            
+                            <li class="dropdown {{ Route::currentRouteName() == 'DotSafetyTraining || businessAndYourTruck || DriversMotorCarriers' ? 'current' : '' }}"><a href="javascript:void(0)">Insurance DOT Training & Policy Coverage</a>
+                            <ul>
+                                <li  class="{{ Route::currentRouteName() == 'DotSafetyTraining' ? 'active' : '' }}"><a href="{{ route('DotSafetyTraining') }}">P&C Insurance Underwriting DOT Safety Training</a></li>
+                                <li class="{{ Route::currentRouteName() == 'businessAndYourTruck' ? 'active' : '' }}"><a href="{{ route('businessAndYourTruck') }}">P&C Insurance Policy Sales for your business and your truck</a></li>
+                                <li class="{{ Route::currentRouteName() == 'DriversMotorCarriers' ? 'active' : '' }}"><a href="{{ route('DriversMotorCarriers') }}">Life & Supplemental Insuarnce for Drivers & Motor Carriers</a></li>
+                            </ul>
+                            </li>
+                            <li class="{{ Route::currentRouteName() == 'expertWitness' ? 'current' : '' }}"><a href="{{ route('expertWitness') }}">DOT Regulatory and Law Enforcement Private Consultation</a></li>
                         </ul>
                     </nav>
                     <div class="outer-box">
@@ -128,7 +135,7 @@
                         <ul>
                             <li><a href="{{ route('aboutUs') }}">About</a></li>
                             <li><a href="{{ route('fieldTrainingEvents') }}">Field Training Events</a></li>
-                            <li><a href="{{ route('insuranceAgencies') }}">Insurance Professionals</a></li>
+                            <li><a href="javascript:void(0)">Insurance Professionals</a></li>
                             <li><a href="{{ route('expertWitness') }}">Expert Witness</a></li>
                         </ul>
                     </div>
@@ -138,13 +145,13 @@
         </div>
     </footer>
     <div id="copy_right">
-        <div class="container">
+        <div class="">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="copy-right-area">
                         <p>Copyright © {{ date('Y') }} DOTCSA - All Rights Reserved. </p>
-                        <small>*DOTCSA is not affiliated nor claims any association, partnership, or relationship with
-                            any Federal or State DOT Government or Law Enforcement Agency. </small>
+                        <strong class="fs-2 text-dark">*DOTCSA is not affiliated nor claims any association, partnership, or relationship with
+                            any Federal or State DOT Government or Law Enforcement Agency. </strong>
                     </div>
                 </div>
             </div>

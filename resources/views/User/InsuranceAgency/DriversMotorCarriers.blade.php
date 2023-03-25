@@ -1,16 +1,16 @@
 @extends('User.Main.mainLayout')
-@section('title', 'Field Training Event | Dotcsa')
+@section('title', 'INSURANCE AGENCIES | Dotcsa')
 @section('content')
 <section id="inner_area_banner">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="inner_banner_text">
-                    <h2>FIELD TRAINING EVENTS</h2>
+                    <h2>INSURANCE AGENCIES</h2>
                     <ul>
-                        <li><a href="{{ route('index') }}">Home</a></li>
+                        <li><a href="javascript:void(0)"> Insurance DOT Training & Policy Coverage<</a></li>
                         <li>&gt;</li>
-                        <li class="active">FIELD TRAINING EVENTS</li>
+                        <li class="active">Life & Supplemental Insuarnce for Drivers & Motor Carriers</li>
                     </ul>
                 </div>
             </div>
@@ -20,21 +20,15 @@
 
 <section class="py-5">
     <div class="container">
-        <h3 class="text-center fw-bold">DOTCSA IS CURRENTLY PLANNING NATIONWIDE TRAINING SESSIONS</h3>
+        <h3 class="text-center fw-bold">DOTCSA HAS EXPERIENCE WORKING THE INSURANCE INDUSTRY</h3>
         <hr>
         <div class="row justify-content-center">
             <div class="col-lg-9">
-                <h5 class="text-center text-dark" style="line-height: 1.5;"><b> Training By Formar DOT Investigators, Auditors & Inspectors Former Law Enforcement Officer, Former & Current Fleet Safety Managers</b></h5>
-                <ol>
-                    <li>1.Online & Nationwide Sheduled Free Public Services 49 CFR DOT Regulations Guidances & Tips</li>
-                    <li>DOTCSA Training the Trainer</li>
-                    <li>Custom Training Targeted To Weaknesses in Your DOT Program Based on SMS BASIC Percentile Ranking</li>
-                    <li>Driver Training for DOT Regulatory Comprehension & Understanding DOT Inspection Standards</li>
-                    <li>Former DOT Investigator Methodology Training for 49 CFR Federal Motor Career Safety Regulations & Hazardous Materials Regulations</li>
-                </ol>
+                <h5 class="text-center text-dark" style="line-height: 1.5;">We Train ES&H Safety Professionals on Targated DOT Compliance For Better Underwriting & Fleet Safety Policies</h5>
+                    
             </div>
             <div class="col-lg-8">
-                <div class="contact_form_main mt-5">
+                <div class="contact_form_main mt-5 mb-5">
                     <form action="#!">
                         <div class="row">
                           <div class="col-lg-12">
@@ -49,11 +43,6 @@
                           </div>
                           <div class="col-lg-12">
                            <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
-                           </div>
-                          </div>
-                          <div class="col-lg-12">
-                           <div class="form-group">
                             <textarea class="form-control" rows="5" placeholder="Type Your Messages"></textarea>
                            </div>
                           </div>
@@ -64,6 +53,12 @@
                           </div>
                         </div>
                     </form>
+                </div>
+                <div class="text-center">
+                    <h4 class="h5 text-center mb-4">There's NO such thing as DOT Certified Training, stop wasting your $.</h4>
+                    <p>ES&H Insurance Industry Safety Professionals Know Risk Management When They See It.</p>
+                    <p>DOTCSA Training provides Association Registered Accreditation through periodic bi-annual training programs that provides your clients with confidence in your ES&H role. </p>
+                    <a href="#" class="btn btn-success mt-2"><i class="fab fa-whatsapp"></i> Message us on WhatsApp</a>
                 </div>
             </div>
         </div>

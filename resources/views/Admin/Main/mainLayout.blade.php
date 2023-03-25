@@ -126,7 +126,7 @@
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <div class="profile-info">
                                         <div class="info">
-                                            <h6>John Doe</h6>
+                                            <h6>{{ auth()->guard('admin')->user()->name }}</h6>
                                             <div class="image">
                                                 <img src="{{ asset('Admin/assets/images/profile/profile-image.png') }}"
                                                     alt="" />

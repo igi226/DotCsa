@@ -11,7 +11,7 @@
                         <ul>
                             <li><a href="{{ url('/') }}">Home</a></li>
                             <li>&gt;</li>
-                            <li class="active">About</li>
+                            <li class="active">Our Mission</li>
                         </ul>
                     </div>
                 </div>

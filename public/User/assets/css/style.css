@@ -765,11 +765,11 @@ Search Overlay CSS
   display: block;
   text-align: center;
   opacity: 1;
-  font-size: 14px;
+  font-size: 13.5px;
   line-height: 30px;
   font-weight: 400;
   letter-spacing: .2px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -797,7 +797,7 @@ Search Overlay CSS
 .main-menu .navigation > li.dropdown > a:after {
   content: "\f107";
   position: absolute;
-  right: 0;
+  right: 2px;
   top: 50%;
   width: 10px;
   height: 20px;
@@ -851,10 +851,11 @@ Search Overlay CSS
 .main-menu .navigation > li > ul > li > a {
   position: relative;
   display: block;
-  padding: 10px 0px;
+  padding: 3px 0px;
   line-height: 29px;
+  /* line-height: 0px; */
   font-weight: 500;
-  font-size: 16px;
+  font-size: 13px;
   color: var(--bg-theme-color1);
   text-align: left;
   margin: 0 30px;
@@ -1395,12 +1396,14 @@ Search Overlay CSS
 .top_bar_left_side{
   display: flex;
 }
-
+.top_bar_left_side .btn{
+  font-size: 12.5px;
+}
 /* Tonis | Logistics HTML Template  */
 
 @media only screen and (max-width: 1700px){
 	.main-menu .navigation>li{
-		margin-right: 25px;
+		margin-right:20px;
 	}
 }
 

@@ -74,4 +74,17 @@ class IndexController extends Controller
       return view('User.ExpertWitness.expertWitness');
 
    }
+
+   public function DotSafetyTraining() {
+      return view('User.InsuranceAgency.dotSafetyTraining');
+   }
+
+   public function businessAndYourTruck() {
+      return view('User.InsuranceAgency.businessAndYourTruck');
+   }
+
+   public function DriversMotorCarriers() {
+      return view('User.InsuranceAgency.DriversMotorCarriers');
+   }
+   
 }

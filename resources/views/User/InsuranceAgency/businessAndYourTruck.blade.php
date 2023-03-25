@@ -8,9 +8,9 @@
                 <div class="inner_banner_text">
                     <h2>INSURANCE AGENCIES</h2>
                     <ul>
-                        <li><a href="{{ route('index') }}">Home</a></li>
+                        <li><a href="javascript:void(0)"> Insurance DOT Training & Policy Coverage</a></li>
                         <li>&gt;</li>
-                        <li class="active">INSURANCE AGENCIES</li>
+                        <li class="active">P&C Insurance Policy Sales for your business and your truck</li>
                     </ul>
                 </div>
             </div>
@@ -23,12 +23,10 @@
         <h3 class="text-center fw-bold">DOTCSA HAS EXPERIENCE WORKING THE INSURANCE INDUSTRY</h3>
         <hr>
         <div class="row justify-content-center">
-            <div class="col-lg-9">
-                <h5 class="text-center text-dark" style="line-height: 1.5;">DOTCSA IS Currentiy working with two National Brokers providing Subject
-                    Matter Experts to support your Safety Risk Management Goals</h5>
-                    <h5 class="text-center text-dark" style="line-height: 1.5;">DOTCSA is partner with many Commercial Truck Insurance Agents for
-                        retaining your clients year after year for renewal.</h5>
-            </div>
+            {{-- <div class="col-lg-9">
+                <h5 class="text-center text-dark" style="line-height: 1.5;">We train ES&H and OSHA Safety Professionals to manage DOT Programs</h5>
+                   
+            </div> --}}
             <div class="col-lg-8">
                 <div class="contact_form_main mt-5 mb-5">
                     <form action="#!">
@@ -48,6 +46,11 @@
                             <textarea class="form-control" rows="5" placeholder="Type Your Messages"></textarea>
                            </div>
                           </div>
+                          <div class="col-lg-12">
+                            <div class="form-group">
+                             <input type="file" name="" class="form-control">
+                            </div>
+                           </div>
                           <div class="col-lg-12">
                            <div class="contact_form_submit">
                             <button class="btn btn-theme text-dark text-uppercase">Send</button>

@@ -23,13 +23,12 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="text-center">
-                    <h4 class=" text-center mb-4">Our Founding Members Have  Former Official Subject Matter Expertise</h4>
-                    <p>DOTCSA has founding members with specialized technical and transportation industry knowledge who can "assist the trier of fact,". </p>
-                    <p>DOTCSA's founding members can review your situation involving HR, Legal, or other
-                        Subject Matter Expertise.
-                        We use our proven experience in Private Fleet Industry Management, Former State
-                        & Federal DOT Government Agencies, and Former Law Enforcement to conduct
-                        Independent Third Party Analysis for your professional needs.</p>
+                    <h4 class=" text-center mb-4">Our Former Govermment & Private Industry Founder & Members Subject Matter Expertise</h4>
+                    <p>We Can Provide Professionally Completed DOT Redulatory Reports Based on Former Federal and State DOT Investigations & Situations You Need Support in Such:</p>
+                    <p>Human Resources Employee Management <br>
+                    Indepent Post Accident Investigations <br>
+                Focused DOT Mock Audits & Investigations Targeting Program in Your Company for Quality Control <br>
+            We Can Work With Our Former Law Enforcement Founder Members for Accident Reconstruntion and Crash Investigations</p>
                     <a href="mailto:safety@dotcsa.com" class="btn btn-theme text-uppercase text-dark mt-2">Find out more</a>
                 </div>
             </div>

@@ -23,7 +23,10 @@ Route::get('/about-us', [IndexController::class, 'aboutUs'])->name('aboutUs');
 Route::get('/motor-carrier-support', [IndexController::class, 'motorCarrierSupport'])->name('motorCarrierSupport');
 Route::post('/register-form', [IndexController::class, 'registerRequest'])->name('registerRequest');
 Route::get('/field-training-events', [IndexController::class, 'fieldTrainingEvents'])->name('fieldTrainingEvents');
-Route::get('/insurance-professionals', [IndexController::class, 'insuranceAgencies'])->name('insuranceAgencies');
+Route::get('/life&supplemental-insuarnce-for-drivers&motor-carriers', [IndexController::class, 'DriversMotorCarriers'])->name('DriversMotorCarriers');
+Route::get('/P&C-insurance-underwriting-dot-safety-training', [IndexController::class, 'DotSafetyTraining'])->name('DotSafetyTraining');
+Route::get('/P&C-insurance-policy-sales-for-your-business-and-your-truck', [IndexController::class, 'businessAndYourTruck'])->name('businessAndYourTruck');
+
 Route::get('/expert-witness', [IndexController::class, 'expertWitness'])->name('expertWitness');
 Route::get('admin/', function() {
     return redirect('admin/dashboard');
