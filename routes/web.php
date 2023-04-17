@@ -26,6 +26,8 @@ Route::get('/field-training-events', [IndexController::class, 'fieldTrainingEven
 Route::get('/life&supplemental-insuarnce-for-drivers&motor-carriers', [IndexController::class, 'DriversMotorCarriers'])->name('DriversMotorCarriers');
 Route::get('/P&C-insurance-underwriting-dot-safety-training', [IndexController::class, 'DotSafetyTraining'])->name('DotSafetyTraining');
 Route::get('/P&C-insurance-policy-sales-for-your-business-and-your-truck', [IndexController::class, 'businessAndYourTruck'])->name('businessAndYourTruck');
+Route::get('/gallery', [IndexController::class, 'gallery'])->name('gallery');
+
 
 Route::get('/expert-witness', [IndexController::class, 'expertWitness'])->name('expertWitness');
 Route::get('admin/', function() {

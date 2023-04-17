@@ -135,8 +135,8 @@
                         <ul>
                             <li><a href="{{ route('aboutUs') }}">About</a></li>
                             <li><a href="{{ route('fieldTrainingEvents') }}">Field Training Events</a></li>
-                            <li><a href="{{ route('expertWitness') }}">Expert Witness</a></li>
-                            <li><a href="javascript:void(0)">Gallery</a></li>
+                            <li><a href="{{ route('expertWitness') }}">DOT Regulatory and Law Enforcement Private Consultation</a></li>
+                            <li><a href="{{ route('gallery') }}">Gallery</a></li>
                         </ul>
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                 <div class="col-lg-12">
                     <div class="copy-right-area">
                         <p>Copyright © {{ date('Y') }} DOTCSA - All Rights Reserved. </p>
-                        <strong class="fs-2 text-dark">*DOTCSA is not affiliated nor claims any association, partnership, or relationship with
+                        <strong class="fs-5 text-dark">*DOTCSA is not affiliated nor claims any association, partnership, or relationship with
                             any Federal or State DOT Government or Law Enforcement Agency. </strong>
                     </div>
                 </div>

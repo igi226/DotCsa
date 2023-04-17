@@ -101,7 +101,7 @@ class CmsController extends Controller
                     break;
 
                 default:
-                    return back()->with('msg', 'Cms updated, but no page found!');
+                    return back()->with('msg', 'Cms updated');
                     break;
             }
         }
@@ -156,4 +156,34 @@ class CmsController extends Controller
         }
 
     }
+
+    public function galleryIndex() {
+        $data['galleries'] = $this->cms_s->getGalleries();
+        return view('Admin.Cms.galleryIndex', $data);
+    }
+
+    public function galleryUpload(Request $request) {
+        $request->validate(['gallery_image' => 'required']);
+        $data = $request->except('_token');
+        if($this->cms_s->postGalleries($data)){
+            return back()->with('msg', 'Image Uploded Successfully.');
+        }else{
+            return back()->with('msg', 'Some Error Occur.');
+        }
+    }
+
+    public function galleryDelete(Request $request){
+        if($this->cms_s->deleleImage($request->image_id)){
+            return response()->json([
+                'status' => true,
+                'msg' => 'Image Deleted Successfully'
+            ]);
+        }else{
+            return response()->json([
+                'status' => false,
+                'msg' => 'Some Error Occur! Try Again.'
+            ]);
+        }
+    }
+    
 }

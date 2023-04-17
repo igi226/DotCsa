@@ -25,9 +25,10 @@
                         <div class="input-style-1">
                             <label> short desk</label>
                             @if (!empty($the_cms->short_desc))
-                            <input type="text" placeholder="" name="short_desc" value="{{ $the_cms->short_desc }}" />
+                                <input type="text" placeholder="" name="short_desc" value="{{ $the_cms->short_desc }}" />
                             @else
-                            <input disabled type="text" class="text-danger"  value="{{ "It has no short description, you can skip this." }}" />
+                                <input disabled type="text" class="text-danger"
+                                    value="{{ 'It has no short description, you can skip this.' }}" />
                             @endif
                             @if ($errors->has('short_desc'))
                                 <span class="text-danger">{{ $errors->first('short_desc') }}</span>
@@ -38,9 +39,9 @@
                         <div class="input-style-1">
                             <label> Description</label>
                             @if (!empty($the_cms->description))
-                            <textarea name="description" id="body" cols="30" rows="10">{{ $the_cms->description }}</textarea>
+                                <textarea name="description" id="body" cols="30" rows="10">{{ $the_cms->description }}</textarea>
                             @else
-                            <textarea class="text-danger" disabled>{{ "This portion has not any description, You can skip this." }}</textarea>
+                                <textarea class="text-danger" disabled>{{ 'This portion has not any description, You can skip this.' }}</textarea>
                             @endif
                             @if ($errors->has('description'))
                                 <span class="text-danger">{{ $errors->first('description') }}</span>
@@ -62,7 +63,7 @@
                         <div class="input-style-1">
                             <label> image</label>
                             @if (!empty($the_cms->image))
-                            <input type="file"  name="image" />
+                                <input type="file" name="image" />
                             @endif
                             @if ($errors->has('image'))
                                 <span class="text-danger">{{ $errors->first('image') }}</span>
@@ -81,12 +82,12 @@
     </div>
 @endsection
 @section('ckeditor')
-<script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
-<script>
-    ClassicEditor
-        .create(document.querySelector('#body'))
-        .catch(error => {
-            console.error(error);
-        });
-</script>   
+    <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#body'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
 @endsection

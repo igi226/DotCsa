@@ -4,17 +4,19 @@ namespace App\Http\Controllers\User\Index;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\DotProfessionalRequest;
+use App\Repository\Cms\CmsInterface;
 use App\Repository\DotProfessional\DotcsaProfessionalInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
-   private $dotProfessional;
+   private $dotProfessional, $cm_s;
 
-   public function __construct(DotcsaProfessionalInterface $dotcsaProfessionalInterface)
+   public function __construct(DotcsaProfessionalInterface $dotcsaProfessionalInterface, CmsInterface $cmsInterface)
    {
       $this->dotProfessional = $dotcsaProfessionalInterface;
+      $this->cm_s = $cmsInterface;
    }
    public function index()
    {
@@ -85,6 +87,11 @@ class IndexController extends Controller
 
    public function DriversMotorCarriers() {
       return view('User.InsuranceAgency.DriversMotorCarriers');
+   }
+
+   public function gallery(){
+      $data['gallery_images'] = $this->cm_s->getGalleries();
+      return view('User.Gallery.gallery', $data);
    }
    
 }

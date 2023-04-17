@@ -27,7 +27,13 @@
                 <h5 class="text-center text-dark" style="line-height: 1.5;">We train ES&H and OSHA Safety Professionals to manage DOT Programs</h5>
                    
             </div> --}}
-            <div class="col-lg-8">
+            <div class="col-lg-6">
+                <div class="contact_form_main mt-5 mb-5">
+                    <img src="{{ asset('User\assets\img\Types of insurance 11.jpg') }}" alt="">
+                </div>
+               
+            </div>
+            <div class="col-lg-6">
                 <div class="contact_form_main mt-5 mb-5">
                     <form action="#!">
                         <div class="row">
@@ -59,12 +65,13 @@
                         </div>
                     </form>
                 </div>
-                <div class="text-center">
-                    <h4 class="h5 text-center mb-4">There's NO such thing as DOT Certified Training, stop wasting your $.</h4>
-                    <p>ES&H Insurance Industry Safety Professionals Know Risk Management When They See It.</p>
-                    <p>DOTCSA Training provides Association Registered Accreditation through periodic bi-annual training programs that provides your clients with confidence in your ES&H role. </p>
-                    <a href="#" class="btn btn-success mt-2"><i class="fab fa-whatsapp"></i> Message us on WhatsApp</a>
-                </div>
+                
+            </div>
+            <div class="text-center">
+                <h4 class="h5 text-center mb-4">There's NO such thing as DOT Certified Training, stop wasting your $.</h4>
+                <p>ES&H Insurance Industry Safety Professionals Know Risk Management When They See It.</p>
+                <p>DOTCSA Training provides Association Registered Accreditation through periodic bi-annual training programs that provides your clients with confidence in your ES&H role. </p>
+                <a href="#" class="btn btn-success mt-2"><i class="fab fa-whatsapp"></i> Message us on WhatsApp</a>
             </div>
         </div>
     </div>  

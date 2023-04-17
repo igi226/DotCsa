@@ -8,5 +8,9 @@ interface CmsInterface {
     
     public function getCms($slug);
     public function updateCms(array $data, $slug);
+
+    public function getGalleries();
+    public function postGalleries($data);
+    public function deleleImage($image_id);
 }
 ?>

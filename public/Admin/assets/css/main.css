@@ -3859,3 +3859,12 @@ h6,
     margin-top: 13px;
     font-size: 21px;
   }
+
+  .close-btn{
+    position: absolute;
+    margin: 0px -24px;
+    background: none;
+    border: none;
+    color: #f01;
+    font-size: 25px;
+  }

@@ -19,7 +19,9 @@ Route::group(['middleware' => ["admin"]], function () {
     Route::get('cms-home-page', [CmsController::class, 'cmsHomepage'])->name('admin.cmsHomepage');
     Route::get('cms-about-page', [CmsController::class, 'cmsAboutpage'])->name('admin.cmsAboutpage');
     Route::get('cms-motor-career-page', [CmsController::class, 'cmsMotorCareerpage'])->name('admin.cmsMotorCareerpage');
-
+    Route::get('gallery-management', [CmsController::class, 'galleryIndex'])->name('admin.gallery');
+    Route::delete('gallery-delete', [CmsController::class, 'galleryDelete'])->name('admin.galleryDelete');
+    Route::post('gallery-upload', [CmsController::class, 'galleryUpload'])->name('admin.galleryUpload');
     //site-setting
     Route::get('/site-setting', [CmsController::class, 'siteShow'])->name('site.info');
     Route::post('/site-setting', [CmsController::class, 'siteUpdate'])->name('site.update');
